@@ -1,4 +1,8 @@
-CREATE TABLE users (
+
+create schema splitora;
+use splitora;
+
+CREATE TABLE splitora.users (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(150) UNIQUE NOT NULL,
@@ -8,7 +12,7 @@ CREATE TABLE users (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-CREATE TABLE `groups` (
+CREATE TABLE splitora.groups (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     description TEXT,
@@ -17,7 +21,7 @@ CREATE TABLE `groups` (
     FOREIGN KEY (created_by) REFERENCES users(id)
 );
 
-CREATE TABLE group_members (
+CREATE TABLE splitora.group_members (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     group_id BIGINT NOT NULL,
     user_id BIGINT NOT NULL,
@@ -27,7 +31,7 @@ CREATE TABLE group_members (
     UNIQUE KEY unique_group_user (group_id, user_id)
 );
 
-CREATE TABLE expenses (
+CREATE TABLE splitora.expenses (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     description VARCHAR(255) NOT NULL,
     amount DECIMAL(10, 2) NOT NULL, -- Total amount of the expense
@@ -39,7 +43,7 @@ CREATE TABLE expenses (
     FOREIGN KEY (group_id) REFERENCES `groups`(id) ON DELETE SET NULL
 );
 
-CREATE TABLE expense_splits (
+CREATE TABLE splitora.expense_splits (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     expense_id BIGINT NOT NULL,
     user_id BIGINT NOT NULL,
@@ -48,7 +52,7 @@ CREATE TABLE expense_splits (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
-CREATE TABLE settlements (
+CREATE TABLE splitora.settlements (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     payer_id BIGINT NOT NULL,       -- User sending the money
     payee_id BIGINT NOT NULL,       -- User receiving the money
@@ -58,7 +62,7 @@ CREATE TABLE settlements (
     FOREIGN KEY (payee_id) REFERENCES users(id)
 );
 
-INSERT INTO `share`.`users`
+INSERT INTO `splitora`.`users`
 (`name`, `email`, `password_hash`, `phone_number`)
 VALUES
 ('Alice', 'alice@splitora.com', 'hash', '9899898909'),
@@ -72,10 +76,15 @@ VALUES
 ('Priya', 'priya@splitora.com', 'hash', '9878901236'),
 ('Rahul', 'rahul@splitora.com', 'hash', '9889012347');
 
-INSERT INTO `groups` (id, name, description, created_by, created_at, updated_at) VALUES
-(1, 'Flatmates', 'Apartment bills and groceries', 1, NOW(), NOW());
+-- 2. Insert Dummy Group (Created by Alice - ID 1)
+INSERT INTO `splitora`.`groups` (id, name, description, created_by) VALUES
+(1, 'Flatmates', 'Apartment bills and groceries', 1);
 
-INSERT INTO group_members (id, group_id, user_id, joined_at) VALUES
-(1, 1, 1, NOW()),
-(2, 1, 2, NOW()),
-(3, 1, 3, NOW());
+-- 3. Add Users to the Group (Group Members)
+INSERT INTO `splitora`.`group_members` (id, group_id, user_id) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 1, 3);
+
+-- truncate table expenses;
+-- truncate table expense_splits;
