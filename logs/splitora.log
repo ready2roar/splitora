@@ -1,0 +1,54 @@
+2026-10-26T12:19:30.872+05:30  INFO 30145 --- [splitora] [main] com.splitora.SplitoraApplication         : Starting SplitoraApplication using Java 22.0.2 with PID 30145 (/Users/rohit/Documents/intellij-projects/splitora/target/classes started by rohit in /Users/rohit/Documents/intellij-projects/splitora)
+2026-10-26T12:19:30.879+05:30 DEBUG 30145 --- [splitora] [main] com.splitora.SplitoraApplication         : Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-10-26T12:19:30.883+05:30  INFO 30145 --- [splitora] [main] com.splitora.SplitoraApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-10-26T12:19:32.772+05:30  INFO 30145 --- [splitora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-26T12:19:32.921+05:30  INFO 30145 --- [splitora] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 6 JPA repository interfaces.
+2026-10-26T12:19:33.981+05:30  INFO 30145 --- [splitora] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-26T12:19:34.026+05:30  INFO 30145 --- [splitora] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-26T12:19:34.026+05:30  INFO 30145 --- [splitora] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-10-26T12:19:34.135+05:30  INFO 30145 --- [splitora] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3100 ms
+2026-10-26T12:19:34.424+05:30  INFO 30145 --- [splitora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-26T12:19:34.660+05:30  INFO 30145 --- [splitora] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@784d9bc
+2026-10-26T12:19:34.662+05:30  INFO 30145 --- [splitora] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-26T12:19:34.871+05:30  INFO 30145 --- [splitora] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-26T12:19:34.921+05:30  INFO 30145 --- [splitora] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-10-26T12:19:35.358+05:30  INFO 30145 --- [splitora] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-26T12:19:35.672+05:30  INFO 30145 --- [splitora] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/splitora?useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: splitora/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-26T12:19:37.210+05:30  INFO 30145 --- [splitora] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-26T12:19:37.858+05:30  INFO 30145 --- [splitora] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-26T12:19:38.155+05:30  INFO 30145 --- [splitora] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-26T12:19:39.910+05:30  WARN 30145 --- [splitora] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-26T12:19:41.188+05:30  INFO 30145 --- [splitora] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-26T12:19:41.213+05:30  INFO 30145 --- [splitora] [main] com.splitora.SplitoraApplication         : Started SplitoraApplication in 11.39 seconds (process running for 12.301)
+2026-10-26T12:19:41.219+05:30  WARN 30145 --- [splitora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-26T12:19:41.219+05:30  WARN 30145 --- [splitora] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-26T12:20:11.955+05:30  INFO 30145 --- [splitora] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-26T12:20:11.957+05:30  INFO 30145 --- [splitora] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-26T12:20:11.965+05:30  INFO 30145 --- [splitora] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-10-26T12:20:12.956+05:30  INFO 30145 --- [splitora] [http-nio-8080-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 662 ms
+2026-10-26T12:20:22.578+05:30  INFO 30145 --- [splitora] [http-nio-8080-exec-2] c.s.service.impl.ExpenseServiceImpl      : Received request to create expense: 'City Taxi Ride' for amount: 30.00 with split type: EQUAL
+2026-10-26T12:20:22.698+05:30 DEBUG 30145 --- [splitora] [http-nio-8080-exec-2] c.s.service.impl.ExpenseServiceImpl      : Expense associated with group ID: 1
+2026-10-26T12:20:22.698+05:30 DEBUG 30145 --- [splitora] [http-nio-8080-exec-2] c.s.service.impl.ExpenseServiceImpl      : Executing split strategy for type: EQUAL
+2026-10-26T12:20:22.772+05:30  INFO 30145 --- [splitora] [http-nio-8080-exec-2] c.s.service.impl.ExpenseServiceImpl      : Successfully saved expense with ID: 1 and generated 2 split shares
+2026-10-26T12:20:58.460+05:30  INFO 30145 --- [splitora] [http-nio-8080-exec-3] c.s.service.impl.BalanceServiceImpl      : Calculating balance summary for user ID: 1
+2026-10-26T12:20:58.634+05:30  INFO 30145 --- [splitora] [http-nio-8080-exec-3] c.s.service.impl.BalanceServiceImpl      : Calculated balance summary for user Alice. Net balance: 15.00
+2026-10-26T12:22:08.306+05:30  INFO 30145 --- [splitora] [http-nio-8080-exec-5] c.s.service.impl.SettlementServiceImpl   : Processing settlement: User 2 paying User 1 amount: 15.00
+2026-10-26T12:22:08.341+05:30  INFO 30145 --- [splitora] [http-nio-8080-exec-5] c.s.service.impl.SettlementServiceImpl   : Successfully recorded settlement with ID: 1
+2026-10-26T12:22:45.862+05:30  INFO 30145 --- [splitora] [http-nio-8080-exec-10] c.s.service.impl.BalanceServiceImpl      : Calculating balance summary for user ID: 1
+2026-10-26T12:22:45.906+05:30  INFO 30145 --- [splitora] [http-nio-8080-exec-10] c.s.service.impl.BalanceServiceImpl      : Calculated balance summary for user Alice. Net balance: 0
+2026-10-26T12:28:24.511+05:30  INFO 30145 --- [splitora] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-26T12:28:24.529+05:30  INFO 30145 --- [splitora] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-26T12:28:24.546+05:30  INFO 30145 --- [splitora] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-26T12:28:24.558+05:30  INFO 30145 --- [splitora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-26T12:28:24.788+05:30  INFO 30145 --- [splitora] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

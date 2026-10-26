@@ -1,0 +1,14 @@
+package com.splitora.repository;
+
+import com.splitora.model.entity.GroupMember;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+public interface GroupMemberRepository extends JpaRepository<GroupMember, Long> {
+    List<GroupMember> findByGroupId(Long groupId);
+    List<GroupMember> findByUserId(Long userId);
+    boolean existsByGroupIdAndUserId(Long groupId, Long userId);
+    Optional<GroupMember> findByGroupIdAndUserId(Long groupId, Long userId);
+}
